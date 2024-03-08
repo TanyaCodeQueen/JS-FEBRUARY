@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework 2</title>
+</head>
+<body>
+
+<script>
+    let numbers = [1,2,3,4,5,6,7,8,9,10];
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+    console.log(numbers[2]);
+    console.log(numbers[3]);
+    console.log(numbers[4]);
+    console.log(numbers[5]);
+    console.log(numbers[6]);
+    console.log(numbers[7]);
+    console.log(numbers[8]);
+    console.log(numbers[9]);
+
+//     Second ex
+    let Book1= {
+        title: 'Harry Potter',
+        pageCount: 500,
+        genre: 'Fantasy'
+
+    };
+    let Book2= {
+        title: 'Martin Iden',
+        pageCount: 200,
+        genre: 'Novel'
+
+    };
+    let Book3= {
+        title: 'Jane Eyre',
+        pageCount: 600,
+        genre: 'Novel'
+
+    };
+
+
+//     Third ex
+    let Book21= {
+        title: 'Harry Potter',
+        pageCount: 500,
+        genre: 'Fantasy',
+        author: {name:'Joan Rowling',
+            age:58
+        }
+
+    };
+
+
+    let Book22= {
+        title: 'Martin Iden',
+        pageCount: 200,
+        genre: 'Novel',
+        author:{
+            name:'Jack London',
+            age:40
+        }
+
+    };
+
+    let Book23= {
+        title: 'Jane Eyre',
+        pageCount: 600,
+        genre: 'Novel',
+        author:{
+            name:'Charlotte Brontë',
+            age:38
+        }
+
+    };
+
+    // Fourth ex
+
+    let Users = [
+        { name: 'Iryna', username:'Mother of dragons', password:12345678},
+        { name: 'Vasya', username:'Stranger', password:1000000},
+        { name: 'Nata', username:'Wonder woman', password:87654321},
+        { name: 'Sofia', username:'Sofa', password:111111111},
+        { name: 'Taras', username:'Tarik', password:2020202020},
+        { name: 'Denys', username:'Dendi', password:111111122222222},
+        { name: 'Alina', username:'Alinka129', password:2345678},
+        { name: 'Alla', username:'Alladin', password:10101010},
+        { name: 'Michael', username:'Mishka', password:8654321},
+        { name: 'Tanya', username:'Tati', password:7654321},
+
+    ]
+       console.log(Users[0].password)
+    console.log(Users[1].password)
+    console.log(Users[2].password)
+    console.log(Users[3].password)
+    console.log(Users[4].password)
+    console.log(Users[5].password)
+    console.log(Users[6].password)
+    console.log(Users[7].password)
+    console.log(Users[8].password)
+    console.log(Users[9].password)
+
+
+
+
+
+
+    // Логічні розгалуження:
+    let x= 15;
+    if(x!==0){
+        console.log('Вірно')
+    }
+    else{
+        console.log('Невірно')
+    }
+
+
+    let time=55;
+    if (time<=15){
+        console.log('Перша чверть')
+    }
+    else if( time<=30){
+        console.log('Друга чверть')
+    }
+    else if(time<=45){
+        console.log('Третя чверть')
+    }
+    else{
+        console.log('Четверта чверть')
+    }
+
+let day= 12;
+
+    if(day<=10){
+        console.log('Перша декада')
+    }
+ else if(day<=20){
+     console.log('Друга декада')
+    }
+ else{
+     console.log('Третя декада')
+    }
+
+
+    // Switch
+let dayOfWeek = prompt('Введіть номер дня тижня:')
+     dayOfWeek=parseInt(dayOfWeek)
+
+    switch(dayOfWeek){
+        case 1:
+            document.write(`<h2>Monday</h2>`)
+            break;
+        case 2:
+            document.write(`<h2>Tuesday</h2>`)
+            break;
+        case 3:
+            document.write(`<h2>Wednesday</h2>`)
+            break;
+        case 4:
+            document.write(`<h2>Thursday</h2>`)
+            break;
+        case 5:
+            document.write(`<h2>Friday</h2>`)
+            break;
+        case 6:
+            document.write(`<h2>Saturday</h2>`)
+            break;
+        case 7:
+            document.write(`<h2>Sunday</h2>`)
+            break;
+
+        default:
+            document.write(`<h2>Введіть значення від 1 до 7</h2>`)
+
+    }
+
+    // Порівняння чисел
+
+     let UserNumber1 = prompt('Введіть перше число:')
+    let UserNumber2 = prompt('Введіть друге число:')
+    UserNumber1=parseInt(UserNumber1)
+    UserNumber2=parseInt(UserNumber2)
+
+
+    if(UserNumber1>UserNumber2){
+        document.write(`<h2> ${UserNumber1}</h2>`)
+    }
+    else if(UserNumber1<UserNumber2){
+        document.write(`<h2> ${UserNumber2}</h2>`)
+    }
+    else{
+        document.write('<h2>Числа рівні</h2>')
+    }
+
+    let x2= 1;
+
+    if( x2===0 || x2 === undefined || x2==='' || isNaN(x2) || x2 === false ){
+        x2= 'default';
+    }
+    console.log(`x2:${x2}`);
+
+
+
+
+
+
+
+// Останнє завдання: Перевірка масиву
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
+    if(coursesAndDurationArray[0].monthDuration>=5){
+        document.write(`<h2>Супер 1</h2>`)
+    }
+
+    if(coursesAndDurationArray[1].monthDuration>=5){
+        document.write(`<h2>Супер 2</h2>`)
+    }
+    if(coursesAndDurationArray[2].monthDuration>=5){
+        document.write(`<h2>Супер 3</h2>`)
+    }
+
+    if(coursesAndDurationArray[3].monthDuration>=5){
+        document.write(`<h2>Супер 4</h2>`)
+    }
+    if(coursesAndDurationArray[4].monthDuration>=5){
+        document.write(`<h2>Супер 5</h2>`)
+    }
+    if(coursesAndDurationArray[5].monthDuration>=5){
+        document.write(`<h2>Супер 6</h2>`)
+    }
+
+
+
+</script>
+</body>
+</html>
