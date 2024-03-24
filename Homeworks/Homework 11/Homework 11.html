@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 11</title>
+</head>
+<body>
+<script>
+    fetch('https://dummyjson.com/carts')
+        .then(res => res.json())
+        .then(value => {
+
+            let {carts} = value;
+
+            for (const cart of carts) {
+
+                for (const cartEl in cart) {
+                    if (typeof cart[cartEl] === 'object') {
+                        document.write(`Product list:`);
+                        for (const element of cart[cartEl]) {
+                            document.write("<p>------------------------------------</p>")
+                            for (const el in element) {
+                                if (el === 'thumbnail'){
+                                    document.write(`<img src="${element[el]}">`);
+                                }
+                                 else{ document.write(`<p>${el} ${element[el]}</p>`);}
+
+
+                            }
+                        }
+                        document.write("<p>------------------------------------</p>")
+                        document.write(`<p>End of product list:</p>`);
+                        document.write("<p>------------------------------------</p>")
+
+                    } else {
+                        document.write(`<p><b>${cartEl}: ${cart[cartEl]}</b></p>`);
+                    }
+                }
+
+            }
+        })
+
+        //
+        // Second task
+
+
+
+
+
+
+    // fetch('https://dummyjson.com/recipes?limit=50')
+    //     .then(res => res.json())
+    //     .then(value => {
+    //
+    //         let {recipes} = value;
+    //
+    //         for (const recipe of recipes) {
+    //
+    //
+    //             let div= document.createElement('div');
+    //             let h2= document.createElement('h2');
+    //             h2.innerText = recipe.name;
+    //
+    //             document.body.appendChild(div);
+    //             div.appendChild(h2);
+    //
+    //             let ingredients= recipe.ingredients;
+    //             let ul=document.createElement('ul');
+    //             document.body.appendChild(ul);
+    //             for(ingredient of ingredients){
+    //                let li= document.createElement('li');
+    //                 li.innerText=ingredient;
+    //                 ul.appendChild(li);
+    //             }
+    //
+    //
+    //
+    //
+    //         }
+    //
+    //     });
+
+
+
+    // Task 3
+
+
+
+
+
+
+</script>
+</body>
+</html>

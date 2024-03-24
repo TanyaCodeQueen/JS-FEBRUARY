@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then (res=>res.json())
+    .then(users => {
+        let ul=document.createElement('ul');
+             for(let user of users){
+                 let li= document.createElement('li');
+                 li.innerText= user.id + ' ' +user.name
+                 let hrefa = document.createElement('a');
+                 hrefa.href = 'user-details.html?id=' + `${user.id}`;
+                 hrefa.innerText = 'Details';
+                 hrefa.addEventListener('click', () => {
+                     location.href = 'user-details.html?userId=' + user.id;
+                 });
+
+
+                 ul.append(li,hrefa);
+
+             }
+             document.body.appendChild(ul);
+
+
+    })
+</script>
+</body>
+</html>
